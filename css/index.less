@@ -1,6 +1,6 @@
-@import "reset.min.css";
-@import "animate.min.css";
-@import "swiper.min.css";
+@import "reset.min.less";
+@import "animate.min.less";
+@import "swiper.min.less";
 
 html {
   font-size: 100px; /*640PX：1REM=100PX*/
@@ -494,45 +494,54 @@ html, body {
       }
     }
 
-    img,h2{
-      opacity:0;
+    h2, img {
+      opacity: 0;
+
+      &:not(:nth-last-of-type(1)) {
+        transition: .3s;
+      }
     }
   }
 
   #page2 {
-    h2{
-      -webkit-animation: bounceInLeft 1s both;
+    h2 {
       animation: bounceInLeft 1s both;
     }
-    img:nth-last-of-type(1){
-      animation:shake 1s both;
+
+    img:nth-last-of-type(1) {
+      animation: shake 1s both;
     }
 
-    img{
-      &:not(:nth-last-of-type(1)){
-        transition: .3s;
+    img {
+      &:not(:nth-last-of-type(1)) {
         opacity: 1;
-        animation: tata 1s .3s infinite both;
+        animation: tada 1s .3s infinite both;
       }
-      &:nth-of-type(1){
+
+      &:nth-of-type(1) {
         margin-top: -2.9rem;
       }
-      &:nth-of-type(2){
+
+      &:nth-of-type(2) {
         margin-top: -1.7rem;
         margin-left: 1.5rem;
       }
-      &:nth-of-type(3){
+
+      &:nth-of-type(3) {
         margin-top: .7rem;
         margin-left: 1.5rem;
       }
-      &:nth-of-type(4){
+
+      &:nth-of-type(4) {
         margin-top: 1.9rem;
       }
-      &:nth-of-type(5){
+
+      &:nth-of-type(5) {
         margin-top: .7rem;
         margin-left: -2.5rem;
       }
-      &:nth-of-type(6){
+
+      &:nth-of-type(6) {
         margin-top: -1.7rem;
         margin-left: -2.5rem;
       }
